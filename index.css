@@ -1,13 +1,28 @@
-body:after {
-  content: ' ';
+body::after {
   display: block;
-  background: white;
-  mix-blend-mode: saturation;
-  pointer-events: none;
+  position: fixed;
   height: 100vh;
   width: 100vw;
-  position: fixed;
+  content: ' ';
+  background: white;
+  mix-blend-mode: saturation;
   top: 0;
   left: 0;
+  z-index: 2147483646;
+  pointer-events: none;
+}
+
+body::before {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  bottom: 0;
+  left: 0;
+  content: '✊🏿 We stand together with the Black community in the fight against racism and discrimination. #blacklivesmatter';
+  padding: 20px;
+  color: #000;
+  background: #fff;
+  border-top: 1px solid #000;
   z-index: 2147483647;
+  text-align: center;
 }
